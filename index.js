@@ -12,7 +12,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    // res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.send('Hello World!')
 });
 
 app.use('/api/fortune', fortuneRoutes);
