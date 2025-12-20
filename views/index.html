@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Fortune Cookie 🥠</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🥠 Reverse Fortune Cookie</h1>
+        <p class="tagline">Discover the misfortune that led to your current situation</p>
+    </header>
+
+    <main>
+        <div class="input-section">
+            <label for="situation">What's your current situation?</label>
+            <textarea
+                    id="situation"
+                    placeholder="e.g., I'm stuck in traffic, I got promoted, I'm feeling lonely..."
+                    rows="4"
+            ></textarea>
+            <button id="generateBtn">Crack Open Your Misfortune</button>
+        </div>
+
+        <div id="result" class="result hidden">
+            <div class="fortune-card">
+                <h2>Your Reverse Fortune</h2>
+                <p class="misfortune" id="misfortune"></p>
+
+                <div class="details">
+                    <div class="lucky-numbers">
+                        <h3>Lucky Numbers</h3>
+                        <div id="numbers" class="numbers"></div>
+                    </div>
+
+                    <div class="preventability">
+                        <h3>Preventability Score</h3>
+                        <div class="score-circle">
+                            <span id="score">0</span>%
+                        </div>
+                        <p id="interpretation"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Consulting the cosmos...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </main>
+
+    <footer>
+        <p>Remember: All misfortunes are 100% scientifically unverified</p>
+    </footer>
+</div>
+
+<script src="/js/client.js"></script>
+</body>
+</html>
